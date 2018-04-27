@@ -1,7 +1,7 @@
 import requests
 
 
-class controller:
+class Controller:
     def __init__(self):
         return
 
@@ -17,7 +17,7 @@ class controller:
 
 
 if __name__ == '__main__':
-    while(True):
+    while True:
         s = input("")
         if s == 'xx':
             requests.get('http://127.0.0.1/xx')

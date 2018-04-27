@@ -1,23 +1,37 @@
 import transaction
 
-class block:
+class Block:
     def __init__(self, json_or_dict):
+        self.hash = 0
+        self.children = []
         '''
         hash
         version
         parent
-        children
         timestamp
+        bits
+        nonce
+        children
         txs
+
+
         balance
         height
         reward
-        nonce
+
         '''
         self.info = json_or_dict
         return
+    '''    
+    def get_hash(self):
+        return self.hash
 
-    def verify_block(self):
+    def get_children(self):
+        return self.children
+
+    def add_children(self, block):
+        self.children.append(block)
+    '''
+    def verify(self):
         return
 
-    def
